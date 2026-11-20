@@ -1,0 +1,12 @@
+[Unit]
+Description=Blink three LEDs (1s / 2s / 3s) via libgpiod
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/threeleds
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
